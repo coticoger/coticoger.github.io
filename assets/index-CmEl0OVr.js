@@ -302,4 +302,4 @@ Please change the parent <Route path="${G}"> to <Route path="${G==="/"?"*":`${G}
   @media (max-width: 768px) {
     margin-top: 30px;   
   }
-`,jS=()=>{const n=ma.c(3);let c,r;n[0]===Symbol.for("react.memo_cache_sentinel")?(c=J.jsx(US,{}),r=J.jsx(DS,{}),n[0]=c,n[1]=r):(c=n[0],r=n[1]);let f;return n[2]===Symbol.for("react.memo_cache_sentinel")?(f=J.jsxs(Bg,{basename:"/",children:[c,r,J.jsx(HS,{children:J.jsx(vS,{})})]}),n[2]=f):f=n[2],f};Sp.createRoot(document.getElementById("root")).render(J.jsx(N.StrictMode,{children:J.jsx(jS,{})}));
+`,jS=()=>{const n=ma.c(3);let c,r;n[0]===Symbol.for("react.memo_cache_sentinel")?(c=J.jsx(US,{}),r=J.jsx(DS,{}),n[0]=c,n[1]=r):(c=n[0],r=n[1]);let f;return n[2]===Symbol.for("react.memo_cache_sentinel")?(f=J.jsxs(Bg,{children:[c,r,J.jsx(HS,{children:J.jsx(vS,{})})]}),n[2]=f):f=n[2],f};Sp.createRoot(document.getElementById("root")).render(J.jsx(N.StrictMode,{children:J.jsx(jS,{})}));
