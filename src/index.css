@@ -1,0 +1,16 @@
+/* index.css */
+
+/* html, body, #root 셋 다 막아야 완벽합니다 */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%; /* 너비 제한 */
+  overflow-x: hidden; /* ⭐ 가로 스크롤 강제 차단 (핵심) */
+  position: relative; /* 모바일 뷰포트 고정 */
+}
+
+/* 모든 요소에 box-sizing 적용 (안전 장치) */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
