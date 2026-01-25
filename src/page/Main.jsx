@@ -50,7 +50,8 @@ const Bg = styled.div`
   z-index: 1;
 
   @media (max-width: 768px) {
-    height: 30vh;
+    height: 20vh;
+    background-position: 50% 30%;
   }
 `;
 
@@ -118,16 +119,33 @@ const ContentContainer = styled.div`
 `;
 
 const ProfileSection = styled.section`
+  position: relative;               /* ⭐ 필수 */
   display: flex;
   align-items: center;
   gap: 40px;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
   background-image: url(${profilebg});
   background-size: cover;
-  background-position: 50% 15%;
+  background-position: 50% 70%;
   background-repeat: no-repeat;
+
+  overflow: hidden;                
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(176, 163, 163, 0.45);  
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -135,6 +153,7 @@ const ProfileSection = styled.section`
     padding: 30px 20px;
   }
 `;
+
 
 const ProfileImage = styled.div`
   width: 150px;
@@ -151,16 +170,33 @@ const ProfileText = styled.div`
   p {
     font-size: 18px;
     line-height: 1.6;
-    color: #333;
+    color: white;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #333;
     margin-bottom: 20px;
   }
 
   .highlight {
+    position: relative;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     -webkit-text-stroke: 1px #333;
-  }
+    z-index: 1;
+    }
+
+    .highlight::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    top: 50%;
+    height: 0.9em;                     /* ⭐ 글자 높이 기준 */
+    background: rgba(101, 200, 249, 0.75);  /* 형광펜 색 */
+    transform: translateY(-50%) rotate(-1deg);
+    z-index: -1;
+    border-radius: 6px;
+    }
 `;
 
 const NewsSection = styled.section`
@@ -282,12 +318,12 @@ const Main = () => {
           <ProfileImage src={myPhoto ? myPhoto : coco} />
           <ProfileText>
             <p>
-              Hi there! I'm <strong className="highlight">Dongjun Kim</strong>, an
+              Hi there! I'm <span className="highlight">Dongjun Kim</span>, an
               enthusiast dedicated to NLP-powered{" "}
-              <strong className="highlight">AI Drug Discovery</strong>.<br />
+              <span className="highlight">AI Drug Discovery</span>.<br />
               My focus lies in unlocking new therapeutic targets through the
               analysis of protein sequences and molecular data.<br />
-              Curious about my work? Check out my <strong>About, Award, and Project</strong>{" "}
+              Curious about my work? Check out my <span>About, Award, and Project</span>{" "}
               pages to follow my path!
             </p>
           </ProfileText>

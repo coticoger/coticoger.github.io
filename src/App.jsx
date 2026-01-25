@@ -16,7 +16,7 @@ const Main = styled.main`
 
 const App = () => {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <GlobalStyle />
       <Header />
       <Main>

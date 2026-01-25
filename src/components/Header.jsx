@@ -3,12 +3,14 @@ import styled from "styled-components";
 import colors from "../style/colors";
 import { MdMenu } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-
+import background from "../img/bg.png";
 
 const Wrapper = styled.header`
   width: 100%;
   height: 56px;
-  background: ${colors.header};
+  background-image: url(${background});
+  background-size: cover;
+  background-position: 50% 0%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,11 +21,21 @@ const Wrapper = styled.header`
   left: 0;
   z-index: 1000;
 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* ⭐ 불투명도 조절 */
+    z-index: -1;
+  }
+
   @media (max-width: 768px) {
     padding: 0 20px;
     height: 30px;
+    background-position: 50% 0%;
   }
 `;
+
 
 const Title = styled.p`
   color: white;
