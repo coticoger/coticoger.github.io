@@ -246,7 +246,7 @@ const About = () => {
         <ProfileImage src={my} alt="profile" />
         <Name>Kim Dong Jun</Name>
         <SocialLinks>
-          <a href="https://github.com" target="_blank" rel="noreferrer">
+          <a href="https://github.com/coticoger" target="_blank" rel="noreferrer">
             <Github/>
           </a>
           <a href="https://www.linkedin.com/in/동준-김-215098392/" target="_blank" rel="noreferrer">
