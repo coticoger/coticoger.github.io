@@ -14,7 +14,7 @@ import profilebg from "../img/profilebg.png";
 
 const typing = keyframes`
   from { width: 0 }
-  to { width: 22ch }
+  to { width: 25ch }
 `;
 
 const blink = keyframes`
@@ -91,14 +91,14 @@ const WelcomeText = styled.h1`
   width: 0;
   border-right: 3px solid rgba(255,255,255,0.8);
   animation:
-    ${typing} 2.5s steps(22) forwards,
+    ${typing} 2.5s steps(25) forwards,
     ${blink} 0.8s step-end infinite;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 
   @media (max-width: 768px) {
     font-size: 20px;
     animation:
-      ${typing} 2s steps(22) forwards,
+      ${typing} 2s steps(25) forwards,
       ${blink} 0.8s step-end infinite;
   }
 `;
@@ -306,7 +306,7 @@ const Main = () => {
           <CharacterImg src={coco} />
         </Section>
         <Section className="text">
-          <WelcomeText>Welcome coticoger world!</WelcomeText>
+          <WelcomeText>Welcome to coticoger world!</WelcomeText>
         </Section>
         <Section>
           <CharacterImg src={tiger} />

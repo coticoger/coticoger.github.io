@@ -8,6 +8,7 @@ import coco from "../img/coco.png";
 import tiger from "../img/tiger.png";
 import jbnu from "../img/jbnu.png";
 import cnu from "../img/cnu.png";
+import bg from "../img/about.png";
 
 const Container = styled.div`
   max-width: 900px;
@@ -19,6 +20,10 @@ const Container = styled.div`
 const ProfileSection = styled.section`
   text-align: center;
   margin-bottom: 60px;
+  background: url(${bg});
+  padding-block: 30px;
+  border-radius: 15px;
+  background-size: cover;
 `;
 
 const ProfileImage = styled.img`
@@ -26,7 +31,7 @@ const ProfileImage = styled.img`
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-block: 20px;
   border: 3px solid #eee;
   object-position: 50% 10%;
 `;
@@ -36,6 +41,8 @@ const Name = styled.h1`
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 8px;
+  -webkit-text-stroke: 1px #333;
+  color: white;
 `;
 
 const Major = styled.p`
@@ -46,7 +53,6 @@ const Major = styled.p`
 const Interest = styled.p`
   font-size: 0.95rem;
   color: #777;
-  margin: 12px 0 16px;
 `;
 
 const SocialLinks = styled.div`
@@ -70,6 +76,8 @@ const Section = styled.section`
     font-size: 1.4rem;
     margin-bottom: 16px;
     padding-bottom: 6px;
+    -webkit-text-stroke: 1px #333;
+    color: white;
   }
 `;
 
@@ -209,18 +217,26 @@ const Intro = styled.div`
     border: 1px solid #e5e7eb;
     border-radius: 15px;
     padding: 5px 20px;
-    text-align: center;
     margin-bottom: 50px;
     p{
         color: #777;
-        margin: 0 0 10px 0;
         padding: 0;
     }
     h3{
         margin: 0;
         padding : 0;
         margin: 10px 0 5px 0;
+        -webkit-text-stroke: 1px #333;
+        color: white;
     }
+`
+
+const Introtitle = styled.h3`
+    margin: 0;
+    padding : 0;
+    margin: 10px 0 20px 0;
+    -webkit-text-stroke: 1px #333;
+    color: white;
 `
 
 const About = () => {
@@ -240,9 +256,9 @@ const About = () => {
         <Major><strong>Major</strong> : AnimalBiotech (3.89 / 4.5) | <strong>Double Major</strong> : ComputerScience (4.4 / 4.5)</Major>
         <Interest><strong>Interests : NLP, Bioinformatics</strong></Interest>
       </ProfileSection>
-
+    
+    <Introtitle>Introduction</Introtitle>
       <Intro>
-        <h3>Introduction</h3>
         <p>
           A researcher who moves forward slowly and steadily, with interests in NLP and bioinformatics.
         </p>
