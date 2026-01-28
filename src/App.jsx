@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import AppRoutes from "./Routes/AppRoutes";
 import Header from "./components/Header";
 import GlobalStyle from "./GlobalStyle";
@@ -16,13 +16,13 @@ const Main = styled.main`
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GlobalStyle />
       <Header />
       <Main>
         <AppRoutes />
       </Main>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
